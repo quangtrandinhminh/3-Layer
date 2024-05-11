@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Folder Include="EnumCore\" />
       <Folder Include="Mappers\" />
       <Folder Include="Entities\" />
     </ItemGroup>

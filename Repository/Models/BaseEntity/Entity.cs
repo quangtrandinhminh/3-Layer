@@ -1,7 +1,6 @@
 ﻿using DTO.Utils;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using WaterCity.Core.Utils;
 
 namespace Repository.Models.BaseEntity;
 

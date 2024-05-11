@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using TimeZoneConverter;
 
-namespace WaterCity.Core.Utils
+namespace DTO.Utils
 {
     public static class CoreHelper
     {
