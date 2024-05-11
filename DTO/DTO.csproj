@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>DAO</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Mappers\" />
+      <Folder Include="Entities\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+      <PackageReference Include="Riok.Mapperly" Version="3.6.0-next.1" />
+      <PackageReference Include="Serilog.AspNetCore" Version="8.0.2-dev-00338" />
+      <PackageReference Include="TimeZoneConverter" Version="6.1.0" />
+    </ItemGroup>
+
+</Project>
