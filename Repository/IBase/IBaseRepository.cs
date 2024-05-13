@@ -4,8 +4,12 @@ using Repository.Models.BaseEntity;
 
 namespace Repository.IBase;
 
+<<<<<<< Updated upstream
 
     public interface IBaseRepository<T> where T : Entity, new()
+=======
+    public interface IBaseRepository<T> where T : class, new()
+>>>>>>> Stashed changes
     {
         void RefreshEntity(T entity);
 

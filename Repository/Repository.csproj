@@ -7,11 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\BussinessObject\BussinessObject.csproj" />
       <ProjectReference Include="..\DTO\DTO.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Interface\" />
       <Folder Include="Models\" />
     </ItemGroup>
 

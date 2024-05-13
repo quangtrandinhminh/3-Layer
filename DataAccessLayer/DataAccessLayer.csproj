@@ -23,10 +23,10 @@
 
     <ItemGroup>
       <Folder Include="Migrations\" />
-      <Folder Include="Repositories\" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\BussinessObject\BussinessObject.csproj" />
       <ProjectReference Include="..\DTO\DTO.csproj" />
       <ProjectReference Include="..\Repository\Repository.csproj" />
     </ItemGroup>
