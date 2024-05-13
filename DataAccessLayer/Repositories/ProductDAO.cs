@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BussinessObject.Objects;
-using DAO.Infrastructure;
-using Repository.Infrastructure;
+using Repository.Base;
 using Repository.Interface;
 
 namespace Repository.Repositories
 {
-    public class ProductDAO : Repository<Product>, IProductRepository
+    public class ProductDAO : BaseRepository<Product>, IProductRepository
     {
     }
 }

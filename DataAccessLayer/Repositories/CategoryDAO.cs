@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BussinessObject.Objects;
-using DAO.Infrastructure;
-using Repository.Infrastructure;
+using Repository.Base;
 using Repository.Interface;
 
 namespace Repository.Repositories
 {
-    public class CategoryDAO : Repository<Category>, ICategoryRepository
+    public class CategoryDAO : BaseRepository<Category>, ICategoryRepository
     {
     }
 }

@@ -1,16 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
-using System.Linq.Expressions;
-using BussinessObject.Objects;
-using DAO.Exceptions;
-using DTO.Utils;
-using DTO.Constants;
+﻿using BussinessObject.Objects;
+using Microsoft.EntityFrameworkCore;
 using Repository.IBase;
-using Repository.Infrastructure;
-using Repository.Models.BaseEntity;
-using DTO.Utils;
 
-namespace DAO.Base
+namespace Repository.Base
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : class, new()
     {
