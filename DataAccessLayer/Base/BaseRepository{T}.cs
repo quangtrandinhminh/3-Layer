@@ -6,9 +6,10 @@ namespace Repository.Base
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : class, new()
     {
-        protected readonly MyStoreContext _context;
-        protected readonly DbSet<T> _dbSet;
-        public BaseRepository()
+        private readonly MyStoreContext _context;
+        private readonly DbSet<T> _dbSet;
+
+        protected BaseRepository()
         {
             _context = new MyStoreContext();
             _dbSet = _context.Set<T>();
@@ -16,26 +17,55 @@ namespace Repository.Base
 
         public void Add(T entity)
         {
-            _dbSet.Add(entity);
-            _context.SaveChanges();
+            try
+            {
+                _dbSet.Add(entity);
+                _context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            
         }
         
         public IQueryable<T> GetAll()
         {
-            return _dbSet.AsQueryable();
+            try
+            {
+                return _dbSet.AsQueryable();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
         
         public void Delete(T entity)
         {
-            _dbSet.Remove(entity);
-            _context.SaveChanges();
+            try
+            {
+                _dbSet.Remove(entity);
+                _context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
         
         public void Update(T entity)
         {
-            var tracker = _context.Attach(entity);
-            tracker.State = EntityState.Modified;
-            _context.SaveChanges();
+            try
+            {
+                var tracker = _context.Attach(entity);
+                tracker.State = EntityState.Modified;
+                _context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
         }
     }
 }
