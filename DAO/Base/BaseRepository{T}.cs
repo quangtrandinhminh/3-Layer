@@ -13,11 +13,13 @@ namespace DAO.Base
 {
     public abstract class BaseRepository<T> : IBaseRepository<T> where T : Entity, new()
     {
-        protected readonly IDbContext _context;
+        // thay db vào đây
+        //protected readonly IDbContext _context;
         protected readonly DbSet<T> _dbSet;
-        public BaseRepository(IDbContext context)
+        public BaseRepository()
         {
-            _context = context;
+            // new context
+            //_dbSet = _context.Set<T>();
         }
 
         public void Add(T entity)
